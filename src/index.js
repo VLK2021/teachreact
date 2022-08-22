@@ -2,16 +2,43 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+
+const test = React.createElement('div', {
+    id: 'test-id',
+    className: 'test-class',
+    onClick: () => {
+        alert('Hello!')
+}
+}, <div>Hello world!!!</div>);
+
+
+const onclick = () => {alert('Hello from castom btn!')};
+
+const btnId = 'btn-test-id';
+
+
+const CastomButton = (props) =>{
+    const {id,children} = props;
+    return (
+        <button onClick={onclick} id={id}>{children}</button>
+    );
+};
+
+
+const testBtn = React.createElement(CastomButton, {
+id: 'btn-test-2'
+    },
+    'click me');
+
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    testBtn,
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
