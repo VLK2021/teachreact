@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from 'react';
 
-import User from "../User/User";
+import {userService} from "../../services/user.service";
+
 
 
 const Users = () => {
     let [users, setUsers] = useState([]);
 
     useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
+        userService.getAll()
             .then(value => setUsers(value))
     }, [])
 
@@ -16,7 +16,9 @@ const Users = () => {
     return (
         <div>
             {
-                users.map(user => <User key={user.id} user={user}/>)
+               users && <select>{
+                   users.map(user=> <option key={user.id}>{user.id}) - {user.name}</option>)
+               }</select>
             }
         </div>
     );

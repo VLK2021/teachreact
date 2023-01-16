@@ -1,14 +1,12 @@
 import React from 'react';
 
 
-const User = ({user}) => {
-
-    const {id, name} = user;
+const User = () => {
 
 
     return (
         <div>
-            {id}) - {name}
+
         </div>
     );
 };

@@ -1,5 +1,3 @@
-import {Route, Routes} from "react-router-dom";
-
 import './App.css';
 import Users from "./components/Users/Users";
 
@@ -7,13 +5,11 @@ import Users from "./components/Users/Users";
 function App() {
 
 
-  return (
-    <div className="App">
-      <Routes>
-          <Route path={''} element={<Users/>}/>
-      </Routes>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Users/>
+        </div>
+    );
 }
 
 export default App;
