@@ -1,24 +1,23 @@
 import React, {useEffect, useState} from 'react';
+
 import {userService} from "../../services/user.service";
+import Post from "../Post/Post";
 
 
 const Posts = () => {
-    let [posts, setPosts] = useState();
 
+    let [posts, setPosts] = useState();
 
     useEffect(()=>{
         userService.getAllPosts()
             .then(value => setPosts(value));
     }, []);
 
+
     return (
         <div>
             {
-                posts && <select>
-                    {
-                        posts.map(post => <option key={post.id}>{post.id})- {post.title}</option>)
-                    }
-                </select>
+                posts && posts.map(post => <Post key={post.id} post={post}/>)
             }
         </div>
     );
