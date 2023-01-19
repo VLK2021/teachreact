@@ -6,7 +6,13 @@ const getAll = () => {
         .then(response => response.json())
 };
 
+const getAllPosts = () =>{
+    return fetch(urls.posts)
+        .then(response => response.json())
+}
+
 
 export const userService = {
     getAll,
+    getAllPosts
 };
