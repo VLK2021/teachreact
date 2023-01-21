@@ -24,7 +24,7 @@ const Posts = () => {
 
     const submit = (e) => {
         e.preventDefault()
-        setQuery({title:e.target.search.value})
+        setQuery({title: e.target.search.value})
     }
 
 
