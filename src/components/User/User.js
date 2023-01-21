@@ -11,6 +11,7 @@ const User = ({user}) => {
         <div className={'user'}>
             <Link to={id.toString()} state={user}>{id}) - {name}</Link>
         </div>
+
     );
 };
 
