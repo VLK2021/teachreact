@@ -16,16 +16,20 @@ const Form = () => {
             <form onSubmit={handleSubmit(submit)}>
                 <label>FirstName:
                     <input type="text" {...register('firstName', {
-                            required: 'Поле повинно бути заповнене',
-                            minLength: {
-                                value: 6,
-                                message: 'мінімальна довжина імені 6 символів'
-                            },
-                            maxLength: {
-                                value: 10,
-                                message: 'максимальна довжина 10 символів'
-                            }
-                        })}/>
+                        required: 'Поле повинно бути заповнене',
+                        minLength: {
+                            value: 6,
+                            message: 'мінімальна довжина імені 6 символів'
+                        },
+                        maxLength: {
+                            value: 10,
+                            message: 'максимальна довжина 10 символів'
+                        },
+                        pattern: {
+                            value: /[A-Za-z]{3}/,
+                            message: 'помилка вводу даних'
+                        }
+                    })}/>
                 </label>
                 <div>
                     {errors?.firstName && <p>{errors?.firstName?.message || 'Error'}</p>}
