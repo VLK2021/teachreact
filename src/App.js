@@ -1,5 +1,4 @@
 import './App.css';
-import Layout from "./Layout/Layout";
 
 
 function App() {
@@ -7,7 +6,7 @@ function App() {
 
     return (
         <div className="App">
-            <Layout/>
+            ФЗЗ
         </div>
     );
 }
