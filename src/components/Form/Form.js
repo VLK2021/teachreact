@@ -37,7 +37,6 @@ const Form = () => {
 
                 <button disabled={!isValid}>Send</button>
             </form>
-
         </div>
     );
 };
