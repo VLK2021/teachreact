@@ -2,15 +2,11 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 
 
-const Form = () => {
-    const {register, handleSubmit, reset, formState:{errors, isValid}, setValue, watch} = useForm({mode:'onBlur'});
+const Form = ({setQuery}) => {
+    const {register, handleSubmit} = useForm();
 
     const submit = (data) => {
-        console.log(data);
-        setValue('search', data.search);
-        watch(data.search);
-
-        // reset();
+        setQuery({title: data.search});
     }
 
 
@@ -18,15 +14,9 @@ const Form = () => {
         <div className={'form'}>
 
             <form onSubmit={handleSubmit(submit)}>
-                <input type="text" {...register('search',{
-                    required: 'Поле має бути заповнене',
-                })}/>
+                <input type="text" {...register('search')}/>
 
-                <div>
-                    {errors?.search && <p>{errors?.search?.message || 'Error'}</p>}
-                </div>
-
-                <button disabled={!isValid}>search</button>
+                <button>search</button>
             </form>
 
         </div>
