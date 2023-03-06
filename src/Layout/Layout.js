@@ -9,6 +9,7 @@ const Layout = () => {
 const [query, setQuery] = useSearchParams();
 
 
+
     return (
         <div>
             <Form setQuery={setQuery}/>
