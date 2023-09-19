@@ -1,0 +1,40 @@
+.layout {
+    width: 100%;
+    padding: 1rem;
+}
+
+h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.file-uploader__custom-button {
+    cursor: pointer;
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.file-uploader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.file-uploader__preview {
+    width: 200px;
+    height: 200px;
+    border: 1px dashed gray;
+    border-radius: 12px;
+}
+
+.file-uploader__upload-button {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
