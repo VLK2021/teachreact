@@ -1,5 +1,3 @@
-const baseURL = 'http://owu.linkpc.net/api/v3';
-
 const urls = {
     cars: '/cars',
     auth: {
@@ -10,5 +8,5 @@ const urls = {
 
 }
 
-export {urls, baseURL}
+export {urls}
 

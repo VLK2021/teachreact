@@ -13,15 +13,12 @@ const RegisterPage = () => {
 
     const submit = async (user) => {
         try {
-            console.log(user);
             await authService.register(user);
-            console.log('www');
-
             navigate('/login');
         } catch (e) {
-            console.log(e);
             setError(e.message)
         }
+
     };
 
 
