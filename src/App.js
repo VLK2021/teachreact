@@ -1,6 +1,7 @@
-import {Routes} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 
 import './App.css';
+import {Layout} from "./Layout";
 
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
     return (
         <div className="App">
             <Routes>
+                <Route path={'/'} element={<Layout/>}>
 
+                </Route>
             </Routes>
         </div>
     );

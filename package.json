@@ -20,7 +20,8 @@
   },
   "devDependencies": {
     "@types/react-dom": "^18.2.7",
-    "@types/react": "^18.2.21"
+    "@types/react": "^18.2.21",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "scripts": {
     "start": "react-scripts start",
