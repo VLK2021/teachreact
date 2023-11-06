@@ -1,3 +1,55 @@
 .layout {
+    width: 70%;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 5rem auto;
+}
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers {
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.content {
+    padding: 0.5rem;
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 2rem 0;
+}
+
+.buttons {
+    justify-content: space-between;
+}
+
+
+
+.active {
+    background: darkblue;
+    color: snow;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+button{
+    width: 7rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background: darkblue;
+    color: snow;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
