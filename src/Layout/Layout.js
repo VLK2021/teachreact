@@ -18,7 +18,6 @@ const Layout = () => {
         <div className={'layout'}>
             <form onSubmit={handleSubmit}>
                 <h2>Create select with numbers</h2>
-
                 <select value={quantity} onChange={(e) => setQuantity(Number(e.target.value))}>
                     {Array.from({length: 20}, (_, i) => i + 1).map((num) => (
                         <option value={num} key={num}>
