@@ -4,33 +4,3 @@
     box-sizing: border-box;
 }
 
-.questions-block{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.2rem;
-    gap: 1rem;
-}
-
-.single-question{
-    width: 30%;
-    background: gainsboro;
-    box-shadow: 0.2rem 0.2rem 0.2rem gray;
-    height: 10rem;
-    text-align: center;
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
-
-.single-question-selected {
-    width: 30%;
-    background: red;
-    box-shadow: 0.2rem 0.2rem 0.2rem gray;
-    height: 10rem;
-    text-align: center;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 3rem;
-}
-
