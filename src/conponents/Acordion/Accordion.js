@@ -19,7 +19,6 @@ const Accordion = ({obj}) => {
                     <p className={`${visible ? 'title-firs-w' : 'title-first'}`}>
                         {visible < 9 ? `0${id}` : id}
                     </p>
-
                     <p className={'title-second'}>
                         {title}
                     </p>
