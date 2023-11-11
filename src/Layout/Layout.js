@@ -12,7 +12,9 @@ const Layout = () => {
     return (
         <div className={'layout flex-direction'}>
             {
-                data.map(obj => <Accordion key={obj.id} obj={obj}/>)
+                data.map(obj => <Accordion key={obj.id}
+                                           obj={obj}
+                    />)
             }
         </div>
     );
