@@ -7,7 +7,11 @@ import './LayoutStyle.css';
 const Layout = () => {
     const {register, handleSubmit} = useForm();
 
-    const [current, setCurrent] = useState({});
+    const [current, setCurrent] = useState({
+        bill: 0,
+        you: 0,
+        friend: 0
+    });
 
     const [allBill, setAllBill] = useState(0);
     const [percent, setPercent] = useState(0);
@@ -20,10 +24,16 @@ const Layout = () => {
 
     useEffect(() => {
         setAllBill(Number(current.bill));
-        const sum = (Number(allBill) / 100) * (Number(current.you) + (Number(current.friend))) / 2
+        const sum = (Number(current.bill) / 100) * (Number(current.you) + (Number(current.friend))) / 2;
         setPercent(Math.ceil(sum));
-        setResult(allBill + percent);
-    }, [current, allBill, result, percent]);
+        setResult(Number(current.bill) + Math.ceil(sum));
+    }, [current]);
+
+    const reset = () => {
+        setAllBill(0);
+        setResult(0);
+        setPercent(0);
+    }
 
 
     return (
@@ -63,9 +73,15 @@ const Layout = () => {
 
             {
                 <div className={'block-bill'}>
-                    <p>You pay ${result} (${allBill} + ${percent}tip) </p>
+                    <p>You pay ${result} (${allBill} + ${percent} tip) </p>
                 </div>
             }
+
+            <div>
+                <button onClick={reset}>
+                    Reset
+                </button>
+            </div>
         </div>
     );
 };
