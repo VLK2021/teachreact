@@ -5,12 +5,12 @@ import './LayoutStyle.css';
 
 
 const Layout = () => {
-    const {register, handleSubmit} = useForm();
+    const {register, handleSubmit, setValue} = useForm();
 
     const [current, setCurrent] = useState({
         bill: 0,
         you: 0,
-        friend: 0
+        friend: 0,
     });
 
     const [allBill, setAllBill] = useState(0);
@@ -19,7 +19,7 @@ const Layout = () => {
 
 
     const submit = (data) => {
-        setCurrent(data)
+        setCurrent(data);
     }
 
     useEffect(() => {
@@ -33,6 +33,9 @@ const Layout = () => {
         setAllBill(0);
         setResult(0);
         setPercent(0);
+        setValue('bill', 0);
+        setValue('you', 0);
+        setValue('friend', 0);
     }
 
 
