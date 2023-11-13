@@ -1,45 +1,42 @@
-import React, {useEffect, useState} from 'react';
-import {useForm} from "react-hook-form";
+import React, {useState} from 'react';
 
 import './LayoutStyle.css';
 
 
 const Layout = () => {
-    const {register, handleSubmit} = useForm();
+    const [bill, setBill] = useState(0);
+    const [selectYou, setSelectYou] = useState(0);
+    const [selectFriend, setSelectFriend] = useState(0);
 
-    const [current, setCurrent] = useState({});
+    const tip = bill * ((selectYou + selectFriend) / 2 / 100);
 
-    const [allBill, setAllBill] = useState(0);
-    const [percent, setPercent] = useState(0);
-    const [result, setResult] = useState(0);
-
-
-    const submit = (data) => {
-        setCurrent(data)
+    const reset = () => {
+        setBill(0);
+        setSelectYou(0);
+        setSelectFriend(0);
     }
-
-    useEffect(() => {
-        setAllBill(Number(current.bill));
-        const sum = (Number(allBill) / 100) * (Number(current.you) + (Number(current.friend))) / 2
-        setPercent(Math.ceil(sum));
-        setResult(allBill + percent);
-    }, [current, allBill, result, percent]);
 
 
     return (
         <div className={'layout'}>
             <h1>bill</h1>
 
-            <form onChange={handleSubmit(submit)}>
+            <form>
                 <div>
                     <label>How much was the bill?
-                        <input type="number" {...register('bill')}/>
+                        <input type="number"
+                               placeholder={'bill value'}
+                               value={bill}
+                               onChange={(e) => setBill(Number(e.target.value))}
+                        />
                     </label>
                 </div>
 
                 <div>
                     <label>How did you like the service?
-                        <select {...register('you')}>
+                        <select value={selectYou}
+                                onChange={(e) => setSelectYou(Number(e.target.value))}
+                        >
                             <option value={0}>Dissatisfied(0%)</option>
                             <option value={5}>It was okay(5%)</option>
                             <option value={10}>It was good(10%)</option>
@@ -50,7 +47,9 @@ const Layout = () => {
 
                 <div>
                     <label>How did your friend like the service?
-                        <select {...register('friend')}>
+                        <select value={selectFriend}
+                                onChange={(e) => setSelectFriend(Number(e.target.value))}
+                        >
                             <option value={0}>Dissatisfied(0%)</option>
                             <option value={5}>It was okay(5%)</option>
                             <option value={10}>It was good(10%)</option>
@@ -63,9 +62,13 @@ const Layout = () => {
 
             {
                 <div className={'block-bill'}>
-                    <p>You pay ${result} (${allBill} + ${percent}tip) </p>
+                    <p>You pay ${bill + tip} (${bill} + ${tip}tip) </p>
                 </div>
             }
+
+            <div>
+                <button onClick={reset}>reset</button>
+            </div>
         </div>
     );
 };
