@@ -59,7 +59,6 @@ const Layout = () => {
                 </div>
             </form>
 
-
             {
                 <div className={'block-bill'}>
                     <p>You pay ${bill + tip} (${bill} + ${tip}tip) </p>
