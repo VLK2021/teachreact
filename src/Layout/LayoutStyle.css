@@ -1,8 +1,29 @@
 .layout {
     width: 100%;
-    padding: 1rem;
     box-sizing: border-box;
 }
+
+.header {
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    background-color: var(--color-primary);
+}
+
+.main {
+
+}
+
+.box {
+    width: 42rem;
+    max-width: 42rem;
+    min-height: 20rem;
+    background-color: var(--color-background-500);
+    border-radius: 0.9rem;
+    overflow: scroll;
+    position: relative;
+}
+
 
 
 

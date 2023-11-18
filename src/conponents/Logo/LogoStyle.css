@@ -1,0 +1,12 @@
+.logo{
+    gap: 0.8rem;
+}
+
+.logo span {
+    font-size: 3rem;
+}
+
+.logo h1 {
+    font-weight: 600;
+    color: #fff;
+}
