@@ -1,0 +1,6 @@
+.header {
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    background-color: var(--color-primary);
+}

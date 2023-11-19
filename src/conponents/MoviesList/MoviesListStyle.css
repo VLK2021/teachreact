@@ -1,0 +1,13 @@
+.movieList-btn{
+    width: 60%;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+}

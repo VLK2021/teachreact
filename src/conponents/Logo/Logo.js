@@ -7,7 +7,7 @@ const Logo = () => {
     return (
         <main className={'logo flex'}>
             <span role="img">🍿</span>
-            <h1>usePopcorn</h1>
+            <h1>eatPopcorn</h1>
         </main>
     );
 };

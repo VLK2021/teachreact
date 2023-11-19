@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
 import './LayoutStyle.css';
-import {Logo, NumResult, Search} from "../conponents";
 import {movieService} from "../services";
+import {Header, Main} from "../conponents";
 
 
 const Layout = () => {
@@ -18,32 +18,46 @@ const Layout = () => {
             movieService.getAll(query).then(value => {
                 setMovies(value.results);
                 setTotalResults(value?.total_results);
-            });
+            },
+                error => {
+                    console.error('Error fetching movies:', error);
+                });
         }
     }, [query]);
 
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             if (!query) {
+    //                 setMovies([]);
+    //                 setTotalResults(0);
+    //             } else {
+    //                 const value = await movieService.getAll(query);
+    //                 setMovies(value.results);
+    //                 setTotalResults(value?.total_results);
+    //             }
+    //         } catch (error) {
+    //             console.error("Error fetching data:", error);
+    //         }
+    //     };
+    //
+    //     fetchData();
+    // }, [query]);
+
+
+
     return (
         <main className={'layout width'}>
-            <header className={'header width flex'}>
-                <Logo/>
+            <Header
+                query={query}
+                setQuery={setQuery}
+                totalResults={totalResults}
+            />
 
-                <Search
-                    setQuery={setQuery}
-                    query={query}
-                />
-
-                <NumResult totalResults={totalResults}/>
-            </header>
-
-            <main className={'main width flex'}>
-                <section className={'main-list'}>
-
-                </section>
-
-                <section className={'main-info'}>
-
-                </section>
-            </main>
+            <Main
+                movies={movies}
+                setMovies={setMovies}
+            />
         </main>
     );
 };

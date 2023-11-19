@@ -37,6 +37,18 @@ body {
     align-items: center;
 }
 
+.list{
+    width: 45%;
+    min-height: 20rem;
+    background-color: var(--color-background-500);
+    border-radius: 0.5rem;
+    /*overflow: scroll;*/
+    /*position: relative;*/
+}
+
+
+
+
 
 
 
