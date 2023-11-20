@@ -6,7 +6,7 @@ import {MovieCard} from "../MovieCard/MovieCard";
 
 
 const MoviesList = (props) => {
-    const {movies, setMovies, setWatchedFilms, watchedFilms} = props;
+    const {movies, setMovies, setSingleMovie} = props;
 
     const showMore = async () => {
     }
@@ -18,9 +18,7 @@ const MoviesList = (props) => {
                 {
                     movies && movies.map(obj => <MovieCard key={obj.id}
                                                            obg={obj}
-                                                           movies={movies}
-                                                           setWatchedFilms={setWatchedFilms}
-                                                           watchedFilms={watchedFilms}
+                                                           setSingleMovie={setSingleMovie}
                     />)
                 }
 

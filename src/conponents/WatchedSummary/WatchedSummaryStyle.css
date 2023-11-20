@@ -1,0 +1,14 @@
+.watchedSummary {
+    background-color: var(--color-background-100);
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+}
+
+h2{
+    margin: 0 0 1rem 0;
+}
+
+.watchedSummary-info-block{
+    justify-content: space-around;
+}

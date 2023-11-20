@@ -8,17 +8,23 @@ import {SaveMoviesList} from "../SaveMoviesList/SaveMoviesList";
 const Main = (props) => {
     const {movies, setMovies} = props;
     const [watchedFilms, setWatchedFilms] = useState([]);
+    const [singleMovie, setSingleMovie] = useState();
+
+
 
     return (
         <main className={'main width flex'}>
             <MoviesList
                 movies={movies}
                 setMovies={setMovies}
-                setWatchedFilms={setWatchedFilms}
-                watchedFilms={watchedFilms}
+                setSingleMovie={setSingleMovie}
             />
 
-            <SaveMoviesList/>
+            <SaveMoviesList
+                watchedFilms={watchedFilms}
+                singleMovie={singleMovie}
+                setSingleMovie={setSingleMovie}
+            />
         </main>
     );
 };
