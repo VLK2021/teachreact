@@ -29,18 +29,39 @@ img {
     margin: 0;
 }
 
-p{
+p {
     margin: 0;
 }
 
-.singleMovie-info-block, .singleMovie-rating-block{
-    margin: 3rem 0;
+.singleMovie-info-block, .singleMovie-rating-block {
+    margin: 2rem 0;
 }
 
-.singleMovie-back-btn{
+.singleMovie-rating-block {
+    background-color: var(--color-background-100);
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+
+.singleMovie-rating-block-btn-add {
+    width: 70%;
+    background: var(--color-primary);
+    color: var(--color-text);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    margin-top: 1rem;
+}
+
+.singleMovie-back-btn {
     position: absolute;
     top: 9rem;
-    left:54%;
+    left: 54%;
     background-color: var(--color-text);
     color: var(--color-background-900);
     font-size: 1.4rem;

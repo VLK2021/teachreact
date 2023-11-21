@@ -3,11 +3,12 @@ import React from 'react';
 import './SingleMovieStyle.css';
 import {IMG_URL} from "../../constants";
 import imgForFilm from "../../images/fotoFilm.jpg";
+import StarRating from "../StarRating/StarRating";
 
 
 const SingleMovie = (props) => {
-    const {singleMovie, setSingleMovie} = props;
-    console.log(singleMovie);
+    const {singleMovie, setSingleMovie,watchedFilms, setWatchedFilms, userRating,
+        setUserRating} = props;
 
     const {
         id,
@@ -35,6 +36,14 @@ const SingleMovie = (props) => {
         setSingleMovie(null);
     }
 
+    const addMovie = () => {
+        const foundObject = watchedFilms.find(obj => obj.id === id);
+        if (!foundObject) {
+            const data = [...watchedFilms, {...singleMovie, userRating: userRating}];
+            setWatchedFilms(data);
+        }
+    }
+
 
     return (
         <main className={'singleMovie width flex-direction'}>
@@ -59,8 +68,17 @@ const SingleMovie = (props) => {
 
             </section>
 
-            <section className={'singleMovie-rating-block flex'}>
-                block rating
+            <section className={'singleMovie-rating-block flex-direction'}>
+                <StarRating onSetRating={setUserRating}/>
+
+                {userRating > 0 && (
+                    <button
+                        className="singleMovie-rating-block-btn-add"
+                        onClick={addMovie}
+                    >
+                        + Add to list
+                    </button>
+                )}
             </section>
 
             <section className={'singleMovie-info-block flex width'}>

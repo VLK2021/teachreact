@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Box} from "../Box/Box";
 import {SingleMovie} from "../SingleMovie/SingleMovie";
@@ -6,7 +6,8 @@ import {WatchedSummary} from "../WatchedSummary/WatchedSummary";
 
 
 const SaveMoviesList = (props) => {
-    const {watchedFilms, singleMovie, setSingleMovie} = props;
+    const {watchedFilms, setWatchedFilms, singleMovie, setSingleMovie} = props;
+    const [userRating, setUserRating] = useState(0);
 
 
     return (
@@ -16,6 +17,10 @@ const SaveMoviesList = (props) => {
                     <SingleMovie
                         singleMovie={singleMovie}
                         setSingleMovie={setSingleMovie}
+                        watchedFilms={watchedFilms}
+                        setWatchedFilms={setWatchedFilms}
+                        userRating={userRating}
+                        setUserRating={setUserRating}
                     /> :
                     <section className={'flex-direction width'}>
                         <WatchedSummary

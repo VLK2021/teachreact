@@ -10,7 +10,7 @@ const Main = (props) => {
     const [watchedFilms, setWatchedFilms] = useState([]);
     const [singleMovie, setSingleMovie] = useState();
 
-
+    console.log(watchedFilms);
 
     return (
         <main className={'main width flex'}>
@@ -22,6 +22,7 @@ const Main = (props) => {
 
             <SaveMoviesList
                 watchedFilms={watchedFilms}
+                setWatchedFilms={setWatchedFilms}
                 singleMovie={singleMovie}
                 setSingleMovie={setSingleMovie}
             />
