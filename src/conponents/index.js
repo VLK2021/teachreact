@@ -8,3 +8,4 @@ export * from './SaveMoviesList/SaveMoviesList';
 export * from './MovieCard/MovieCard';
 export * from './Box/Box';
 export * from './WatchedSummary/WatchedSummary';
+export * from './MovieCardInMyList/MovieCardInMyList';

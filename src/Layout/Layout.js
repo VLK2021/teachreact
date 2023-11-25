@@ -25,25 +25,6 @@ const Layout = () => {
         }
     }, [query]);
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             if (!query) {
-    //                 setMovies([]);
-    //                 setTotalResults(0);
-    //             } else {
-    //                 const value = await movieService.getAll(query);
-    //                 setMovies(value.results);
-    //                 setTotalResults(value?.total_results);
-    //             }
-    //         } catch (error) {
-    //             console.error("Error fetching data:", error);
-    //         }
-    //     };
-    //
-    //     fetchData();
-    // }, [query]);
-
 
 
     return (

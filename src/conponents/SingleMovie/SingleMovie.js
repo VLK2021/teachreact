@@ -43,6 +43,7 @@ const SingleMovie = (props) => {
         if (!foundObject) {
             const data = [...watchedFilms, {...singleMovie, userRating: userRating}];
             setWatchedFilms(data);
+            setSingleMovie(null);
         }
     }
 
