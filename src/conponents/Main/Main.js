@@ -12,6 +12,7 @@ const Main = (props) => {
 
     console.log(watchedFilms);
 
+
     return (
         <main className={'main width flex'}>
             <MoviesList

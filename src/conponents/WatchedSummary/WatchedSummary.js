@@ -13,8 +13,8 @@ const WatchedSummary = (props) => {
     useEffect(() => {
         const totalApiResult = watchedFilms.reduce((sum, obj) => sum + obj.vote_average, 0);
         const totalMyResult = watchedFilms.reduce((sum, obj) => sum + obj.userRating, 0);
-        setApiResult(parseFloat((totalApiResult/watchedFilms.length).toFixed(2)));
-        setMyResult(parseFloat((totalMyResult/watchedFilms.length).toFixed(2)));
+        setApiResult(parseFloat((totalApiResult / watchedFilms.length).toFixed(2)));
+        setMyResult(parseFloat((totalMyResult / watchedFilms.length).toFixed(2)));
     }, [watchedFilms]);
 
 

@@ -7,8 +7,10 @@ import StarRating from "../StarRating/StarRating";
 
 
 const SingleMovie = (props) => {
-    const {singleMovie, setSingleMovie,watchedFilms, setWatchedFilms, userRating,
-        setUserRating} = props;
+    const {
+        singleMovie, setSingleMovie, watchedFilms, setWatchedFilms, userRating,
+        setUserRating
+    } = props;
 
     const {
         id,
