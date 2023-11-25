@@ -3,6 +3,6 @@ import {urls} from "../constants";
 
 
 export const movieService = {
-    getAll: (query) => axiosService.get(urls.searchFilm(query)).then(value => value.data),
+    getAll: (query, page) => axiosService.get(urls.searchFilm(query, page)).then(value => value.data),
     getById: (id) => axiosService.get(urls.singleMovie(id)).then(value => value.data),
 }

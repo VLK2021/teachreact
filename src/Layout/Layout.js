@@ -9,13 +9,17 @@ const Layout = () => {
     const [query, setQuery] = useState("");
     const [movies, setMovies] = useState([]);
     const [totalResults, setTotalResults] = useState(0);
+    
+    const[page, setPage] = useState(1);
+
+    
 
     useEffect(() => {
         if (!query) {
             setMovies([]);
             setTotalResults(0);
         } else {
-            movieService.getAll(query).then(value => {
+            movieService.getAll(query, page).then(value => {
                 setMovies(value.results);
                 setTotalResults(value?.total_results);
             },
@@ -23,7 +27,7 @@ const Layout = () => {
                     console.error('Error fetching movies:', error);
                 });
         }
-    }, [query]);
+    }, [page, query]);
 
 
 
@@ -38,6 +42,8 @@ const Layout = () => {
             <Main
                 movies={movies}
                 setMovies={setMovies}
+                setPage={setPage}
+                page={page}
             />
         </main>
     );

@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin-bottom: 0.5rem;
     background-color: var(--color-background-100);
+    cursor: pointer;
 }
 
 .movieCard-img-block {
@@ -19,6 +20,6 @@ img {
     width: 70%;
 }
 
-p{
+p {
     margin: 0;
 }

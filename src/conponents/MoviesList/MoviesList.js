@@ -6,9 +6,16 @@ import {MovieCard} from "../MovieCard/MovieCard";
 
 
 const MoviesList = (props) => {
-    const {movies, setMovies, setSingleMovie} = props;
+    const {movies, setMovies, setSingleMovie, setPage, page} = props;
 
-    const showMore = async () => {
+    const next = async () => {
+        setPage(page + 1);
+    }
+
+    const prev = async () => {
+        if (page > 1) {
+        setPage(page - 1);
+        }
     }
 
 
@@ -23,9 +30,15 @@ const MoviesList = (props) => {
                 }
 
                 {movies.length > 0 ?
-                    <div className={'flex'}>
-                        <button className={'movieList-btn'} onClick={showMore}>
-                            show me more
+                    <div className={'flex width'}>
+                        <button className={'movieList-btn'} onClick={prev}>
+                            prev
+                        </button>
+
+                        <span>Page {page>0 ? page : 1}</span>
+
+                        <button className={'movieList-btn'} onClick={next}>
+                            next
                         </button>
                     </div> : <p className={'flex'}>write what you want search</p>
                 }

@@ -6,7 +6,7 @@ import {SaveMoviesList} from "../SaveMoviesList/SaveMoviesList";
 
 
 const Main = (props) => {
-    const {movies, setMovies} = props;
+    const {movies, setMovies, setPage, page} = props;
     const [watchedFilms, setWatchedFilms] = useState([]);
     const [singleMovie, setSingleMovie] = useState();
 
@@ -19,6 +19,8 @@ const Main = (props) => {
                 movies={movies}
                 setMovies={setMovies}
                 setSingleMovie={setSingleMovie}
+                setPage={setPage}
+                page={page}
             />
 
             <SaveMoviesList
