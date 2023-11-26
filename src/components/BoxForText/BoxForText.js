@@ -6,7 +6,6 @@ import './BoxForTextStyle.css';
 const BoxForText = ({children}) => {
     const [show, setShow] = useState(false);
 
-
     const text = show ? children
         : children.split(' ').slice(0, 8).join(' ') + '...';
 
