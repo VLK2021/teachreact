@@ -1,0 +1,13 @@
+span {
+    color: red;
+    font-size: 1.1rem;
+}
+
+button{
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 0.5rem;
+}
