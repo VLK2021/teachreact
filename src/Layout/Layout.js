@@ -20,6 +20,7 @@ const Layout = () => {
             .then(value => setConverted(value?.rates[toCur]));
     }, [amount, fromCur, toCur]);
 
+
     return (
         <main className={'layout'}>
             <input type="text" value={amount}
