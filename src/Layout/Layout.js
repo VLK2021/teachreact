@@ -11,9 +11,13 @@ const Layout = () => {
 
 
     useEffect(() => {
+        if (fromCur === toCur) {
+            setConverted(amount)
+        }
+
         fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${fromCur}&to=${toCur}`)
             .then(response => response.json())
-            .then(value => console.log(value))
+            .then(value => setConverted(value?.rates[toCur]));
     }, [amount, fromCur, toCur]);
 
     return (
