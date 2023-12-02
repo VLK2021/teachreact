@@ -8,9 +8,7 @@ const Layout = () => {
     const [position, setPosition] =useState({lat: null, lng: null });
     const [error, setError] = useState(null);
 
-
     const {lat, lng} = position;
-
 
     const getPosition = () => {
         setCountClick((prev) => prev +1);
