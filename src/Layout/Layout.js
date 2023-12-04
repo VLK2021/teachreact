@@ -3,13 +3,14 @@ import React from 'react';
 import './LayoutStyle.css';
 
 
+
 const Layout = () => {
 
 
     return (
-        <main className={'layout'}>
-            layout
-        </main>
+        <div className={'layout'}>
+            Layout
+        </div>
     );
 };
 
