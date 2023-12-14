@@ -23,7 +23,9 @@ const Layout = () => {
                 fighters &&
                 fighters.map((obj) =>
                     <div key={obj.name}>
+
                         <img src={obj.source} alt="foto"/>
+
                     </div>
                 )
             }
