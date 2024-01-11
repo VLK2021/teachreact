@@ -10,8 +10,6 @@ const Layout = () => {
 
     return (
         <div className={'layout'}>
-            Layout
-
             <FormComponent/>
         </div>
     );
