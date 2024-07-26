@@ -1,20 +1,20 @@
-import {Route, Routes} from 'react-router-dom';
+import {Route, Routes} from "react-router-dom";
 
 import './App.css';
-import {Layout} from "./Layout";
+import Layout from "./Layout/Layout";
 
 
 function App() {
 
 
     return (
-        <div className="app">
-            <Routes>
-                <Route path={'/'} element={<Layout/>}>
+        <main className="app">
+           <Routes>
+               <Route path={'/'} element={<Layout/>}>
 
-                </Route>
-            </Routes>
-        </div>
+               </Route>
+           </Routes>
+        </main>
     );
 }
 

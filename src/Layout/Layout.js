@@ -1,17 +1,14 @@
 import React from 'react';
 
-import './LayoutStyle.css';
+import styles from './Layout.module.css';
 
 
 const Layout = () => {
-
-
-
     return (
-        <div className={'layout'}>
+        <main className={styles.wrap}>
             Layout
-        </div>
+        </main>
     );
 };
 
-export {Layout};
+export default Layout;
