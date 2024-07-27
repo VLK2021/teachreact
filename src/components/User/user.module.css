@@ -1,0 +1,11 @@
+.wrap {
+    width: 80%;
+    background: darkgray;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
