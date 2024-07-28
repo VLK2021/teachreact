@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 
-import {userService} from "../../services/userService";
+import {userService} from "../../../services/userService";
 import styles from './UserDetail.module.css';
 
 
 const UserDetail = () => {
     const params = useParams();
     const [user, setUser] = useState({});
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -24,7 +25,11 @@ const UserDetail = () => {
 
     return (
         <main className={styles.wrap}>
+            <h1>user details</h1>
+
             {user.name}
+
+            <button onClick={() => navigate(-1)}>back</button>
         </main>
     );
 };

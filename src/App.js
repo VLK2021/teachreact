@@ -2,10 +2,10 @@ import {Route, Routes} from "react-router-dom";
 
 import './App.css';
 import Layout from "./Layout/Layout";
-import Users from "./components/Users/Users";
-import Posts from "./components/Posts/Posts";
-import Comments from "./components/Comments/Comments";
-import UserDetail from "./components/UserDetail/UserDetail";
+import Users from "./components/userComponents/Users/Users";
+import Posts from "./components/postComponents/Posts/Posts";
+import Comments from "./components/commentsComponents/Comments/Comments";
+import UserDetail from "./components/userComponents/UserDetail/UserDetail";
 
 
 function App() {

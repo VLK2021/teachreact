@@ -9,3 +9,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.blockBtns {
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

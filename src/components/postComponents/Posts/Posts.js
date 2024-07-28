@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 
-import {getAllPosts} from "../../store/slices/post.slice";
+import {getAllPosts} from "../../../store/slices/post.slice";
 
 
 const Posts = () => {
