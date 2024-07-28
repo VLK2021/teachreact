@@ -7,10 +7,10 @@ import {userService} from "../../../services/userService";
 
 
 const UserPosts = () => {
-    const navigate = useNavigate();
-    const [userPosts, setUserPosts] = useState([]);
     const params = useParams();
+    const [userPosts, setUserPosts] = useState([]);
     const [currentUserid, setCurrentUserId] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const getPosts = async () => {
