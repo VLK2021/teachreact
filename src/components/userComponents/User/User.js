@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import styles from './user.module.css';
 import ButtonDetails from "../../ButtonDetails/ButtonDetails";
+import {Outlet} from "react-router-dom";
 
 
 const User = ({user}) => {
