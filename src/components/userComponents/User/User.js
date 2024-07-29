@@ -14,7 +14,8 @@ const User = ({user}) => {
 
     return (
         <main className={styles.wrap}>
-            {name}
+            <h1 className={styles.name}>{name}</h1>
+
             <section className={styles.blockBtns}>
                 <ButtonDetails urlDetails={urlDetails}>user details</ButtonDetails>
                 <ButtonDetails urlDetails={urlUserPosts}>user posts</ButtonDetails>
