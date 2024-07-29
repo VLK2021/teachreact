@@ -10,6 +10,10 @@
     align-items: center;
 }
 
+.name {
+    margin: 0;
+}
+
 .blockBtns {
     width: 100%;
     padding: 0 1rem;
