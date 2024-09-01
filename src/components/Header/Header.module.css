@@ -1,0 +1,39 @@
+.wrap {
+    width: 100%;
+    background: black;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 15%;
+}
+
+.nav {
+    width: 70%;
+}
+
+.log {
+    width: 15%;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+p {
+    color: snow;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 0;
+}
