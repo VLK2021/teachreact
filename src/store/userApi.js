@@ -1,4 +1,4 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query";
+import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 
 import {baseURL} from "../constanse/baseUrl";
 import {urls} from "../constanse/urls";
@@ -6,16 +6,24 @@ import {urls} from "../constanse/urls";
 
 export const userApi = createApi({
     reducerPath: 'userApi',
-    baseQuery: fetchBaseQuery({ baseUrl: baseURL }),
-
+    baseQuery: fetchBaseQuery({baseUrl: baseURL}),
     endpoints: (builder) => ({
-        getAllUsers: builder.query({
-            query: () => urls.users,
+        getUsers: builder.query({
+            query: () => `${urls.users}`,
+            providesTags: ['Users'],
         }),
-        getUserById: builder.query({
+        getById: builder.query({
             query: (id) => `${urls.users}/${id}`,
         }),
-    }),
+        getPostsUser: builder.query({
+            query: (id) => `${urls.users}/${id}/posts`,
+        })
+    })
+
 });
 
-export const {useGetUserQuery, useGetUserByIdQuery} = userApi
+export const {
+    useGetUsersQuery,
+    useGetByIdQuery,
+    useGetPostsUserQuery
+} = userApi;
