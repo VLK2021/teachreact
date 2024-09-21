@@ -25,6 +25,7 @@ const Users = () => {
                 {users?.map((user) => (
                     <div key={user.id}>
                         <li>{user.name}</li>
+
                         {/*<button onClick={() => navigate(`/users/${user.id}`)}>Details</button>*/}
                         {/*<button onClick={() => navigate(`/users/${user.id}/posts`)}>User Posts</button>*/}
                             </div>
